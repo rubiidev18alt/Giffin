@@ -1,58 +1,61 @@
 # 🖼️ Giffin
 
-**Giffin** is a simple, browser-based GIF creator. It lets you combine multiple images into an animated GIF without installing any software. Everything runs locally in your web browser.
+**Giffin** is a lightweight, browser-based GIF creator built with HTML, CSS, and JavaScript.
+
+Create animated GIFs from your images directly in your browser—no installation, no server, and no image uploads.
+
+---
 
 ## Features
 
-- 📁 Upload multiple images
-- 🔄 Reorder frames
+- 📁 Import multiple images
+- 🎞️ Create animated GIFs
+- ⬆️ Reorder frames
+- ❌ Remove frames
 - ⏱️ Adjustable frame delay
-- 👀 Live GIF preview
+- 👀 Live preview
 - 💾 Download your finished GIF
-- 🌐 Runs entirely in the browser
-- 🖥️ No server required
+- 🔒 Local processing (your images never leave your device)
+
+---
+
+## Screenshot
+
+*Coming soon.*
+
+---
 
 ## Getting Started
 
-### Option 1: Download
+### Download
 
-1. Download or clone this repository.
-2. Open `index.html` in any modern web browser.
-3. Start creating GIFs.
-
-### Option 2: Host Locally
-
-Serve the project with any static web server.
-
-Examples:
+Clone the repository:
 
 ```bash
-python -m http.server
+git clone https://github.com/yourusername/giffin.git
 ```
 
-or
+Or download the repository as a ZIP from GitHub.
 
-```bash
-npx serve
-```
+### Run
 
-Then visit:
+Open `index.html` in any modern web browser.
 
-```
-http://localhost:8000
-```
+No installation or build process is required.
 
-or the URL provided by your server.
+---
 
-## How to Use
+## Usage
 
 1. Click **Choose Files**.
-2. Select the images you want.
-3. Arrange them in the desired order.
+2. Select one or more images.
+3. Arrange the frame order.
 4. Set the frame delay.
 5. Click **Create GIF**.
-6. Wait for rendering to finish.
-7. Download your new GIF.
+6. Wait for encoding to finish.
+7. Download the generated GIF.
+
+---
 
 ## Supported Formats
 
@@ -61,61 +64,90 @@ or the URL provided by your server.
 - PNG
 - JPG / JPEG
 - WebP
-- GIF (first frame is used)
+- GIF
+- BMP (browser support may vary)
 
 ### Output
 
-- Animated GIF
+- Animated GIF (.gif)
 
-## Browser Compatibility
+---
 
-Giffin works in modern versions of:
-
-- Chrome
-- Edge
-- Firefox
-- Opera
-- Brave
-
-Safari support may vary depending on browser version.
-
-## Built With
+## Technologies
 
 - HTML5
 - CSS3
-- JavaScript
-- GIF.js
+- JavaScript (ES Modules)
+- gifenc
+
+---
+
+## Browser Compatibility
+
+Works in most modern browsers including:
+
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+- Brave
+- Opera
+
+An internet connection is currently required the first time the application loads because the `gifenc` library is imported from a CDN.
+
+---
 
 ## Project Structure
 
-```
+```text
 giffin/
 ├── index.html
-└── README.md
+├── README.md
+└── LICENSE (optional)
 ```
+
+---
 
 ## Roadmap
 
 Planned features include:
 
 - Drag-and-drop frame ordering
-- Per-frame timing
-- Crop and resize tools
+- Per-frame delays
+- FPS mode
+- Frame duplication
 - Reverse animation
 - Ping-pong animation
-- Image filters
-- GIF compression
-- APNG export
+- Resize before export
+- Crop images
+- Rotate and flip frames
+- GIF optimization
 - Animated WebP export
-- Video-to-GIF conversion
-- Dark and light themes
+- APNG export
+- Better progress indicator
+- Offline bundled version (no CDN)
+
+---
+
+## Privacy
+
+Giffin performs GIF creation entirely in your browser.
+
+No images are uploaded or stored on any server.
+
+---
 
 ## License
 
-This project is released under the MIT License.
+This project is licensed under the **MIT License**.
+
+You are free to use, modify, distribute, and include this project in your own software, provided that the original copyright notice and license are included.
+
+For full details, see the `LICENSE` file included with this repository.
+
+---
 
 ## Credits
 
-Created with HTML, CSS, and JavaScript.
+Created with HTML, CSS, JavaScript, and **gifenc**.
 
-Animated GIF encoding is powered by GIF.js.
+Designed as a simple, lightweight, local-first GIF creator.
